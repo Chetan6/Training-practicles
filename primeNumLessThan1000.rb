@@ -1,17 +1,28 @@
 #. Write a function that takes an integer (less than 1000) and return an array of primes till that number.
-def prime(num)
-    
-    n = 2
-    while n < num
-         if num % n == 0
-          return "not prime"
-         end 
-      n += 1
-    end
-        "prime number "
-  end
-  
-  print 'enter number to check prime:'
-  num=gets.chomp.to_i 
+def prime(limit)
+     
+  if limit<=1000
+        for num in 0..limit 
+          
+         count=0
+         n = 2
+         while n < num
+              if num % n == 0
+                  count+=1
+                  break 
+              end 
+           n += 1
+         end
+             if(count==0)
+                 puts "primeNo\t#{num}"
+             end 
+        end 
+  end 
 
-  puts prime(num)
+
+end
+
+print 'enter limit to check prime:'
+limit=gets.chomp.to_i 
+
+prime(limit)
