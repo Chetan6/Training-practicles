@@ -13,17 +13,13 @@ i=0
          i+=1
     end 
 
-    fact=1
+    
 
-    for hello in arr 
-          j=1
-          while j<=hello 
-         while j<=hello 
+    for i in 0...arr.length
+           fact=1
 
-                fact=fact*j 
-            j+=1
-          end 
-          puts "factorial of #{hello} is #{fact}"
+           for j in 1..arr[i]   
+                fact*=j 
+           end 
+              puts "factorail of #{j} :\t#{fact}"
     end 
-
-end 
